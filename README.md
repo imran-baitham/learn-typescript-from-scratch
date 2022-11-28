@@ -1,3 +1,3 @@
-## Getting Started TypeScript
+![preview img](./public/preview.png)
 
-![preview img](/preview.png)
+## TypeScript 🥳
