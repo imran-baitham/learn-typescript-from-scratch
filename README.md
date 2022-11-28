@@ -1,3 +1,3 @@
-![preview img](./public/preview.png)
+![preview img](./src/public/preview.png)
 
 ## TypeScript 🥳
