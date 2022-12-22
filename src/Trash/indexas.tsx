@@ -8,13 +8,13 @@ interface dataProps {
 }
 
 export default function Home() {
-  // const data: dataProps[] = [
-  //   { title: 'first title', color: 'red' },
-  //   { title: 'second div title', color: 'black' },
-  //   { title: 'div title the asdfas awefe', color: 'green' },
-  //   { title: 'second div title', color: 'blue' },
-  //   { title: 'second div title second div', color: 'gray' },
-  // ]
+  const data: dataProps[] = [
+    { title: 'first title', color: 'red' },
+    { title: 'second div title', color: 'black' },
+    { title: 'div title the asdfas awefe', color: 'green' },
+    { title: 'second div title', color: 'blue' },
+    { title: 'second div title second div', color: 'gray' },
+  ]
 
   return (
     <div>
@@ -27,7 +27,7 @@ export default function Home() {
       <main className="">
         <div className="w-full">
           <div className="py-2 flex justify-center items-center">
-            {data.map((item, index) => {
+            {data.map((item: any, index: number) => {
               return (
                 <div
                   className="w-[160px] h-[260px] mx-1 border border-yellow-600 rounded-[20px] shadow"
