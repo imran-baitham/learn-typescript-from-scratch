@@ -2,10 +2,12 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { appWithTranslation } from 'next-i18next'
 import { useEffect, useState } from 'react'
+import Header from '../components/Header/Header'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Hydrated>
+      <Header />
       <Component {...pageProps} />
     </Hydrated>
   )

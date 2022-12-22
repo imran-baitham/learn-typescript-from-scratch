@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import Header, { HeaderProps } from './Header'
+import Header from './Header'
 
 export default {
   title: 'Header',
@@ -7,11 +7,10 @@ export default {
 } as Meta
 
 //👇 We create a “template” of how args map to rendering
-const Template: Story<HeaderProps> = (args) => <Header {...args} />
+const Template: Story = (args) => <Header {...args} />
 
 export const Navbar = Template.bind({})
 
 Navbar.args = {
   /*👇 The args you need here will depend on your component */
-  title: 'header',
 }
