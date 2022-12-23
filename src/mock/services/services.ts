@@ -114,15 +114,59 @@ export const Industries = [
       "Companies that provide products and services to protect computer systems and networks from cyber",
   },
   {
-    id: "19",
-    title: "Telecommunication",
+    id: "3423",
+    title: "Telecommunicati",
     subtitle:
-      "Zompanies that provide products and services to protect computer systems and networks from cyber",
+      "Companies that provide products and services to protect computer systems and networks from cyber",
   },
   {
     id: "19",
-    title: "Telecommunication",
-    subtitle:
-      "Zompanies that provide products and services to protect computer systems and networks from cyber",
+    title: "Imran",
+    subtitle: "Super mind person",
+  },
+  {
+    id: "19",
+    title: "baitham",
+    subtitle: "family name",
+  },
+  {
+    id: "19",
+    title: "zahid",
+    subtitle: "full stack",
+  },
+  {
+    id: "19",
+    title: "ali",
+    subtitle: "cyber google",
+  },
+  {
+    id: "19",
+    title: "shafi",
+    subtitle: "backend developer",
+  },
+  {
+    id: "19",
+    title: "nadeem",
+    subtitle: "deepres developer",
+  },
+  {
+    id: "19",
+    title: "nasir",
+    subtitle: "old man",
+  },
+  {
+    id: "19",
+    title: "muzmil",
+    subtitle: "north aims unilo",
+  },
+  {
+    id: "19",
+    title: "haider abbas",
+    subtitle: "marid person and fet boy",
+  },
+  {
+    id: "19",
+    title: "rashid",
+    subtitle: "fuu ux/ui",
   },
 ];

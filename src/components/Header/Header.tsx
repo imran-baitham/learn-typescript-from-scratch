@@ -47,7 +47,10 @@ function Header() {
 
   const handleSearch = (event: any) => {
     if (event.key === 'Enter') {
-      localStorage.setItem('query', JSON.stringify(event.target.value))
+      localStorage.setItem(
+        'query',
+        JSON.stringify(event.target.value),
+      )
       if (event) {
         router.push('/query')
       }
