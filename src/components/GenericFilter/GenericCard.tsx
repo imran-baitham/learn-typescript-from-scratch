@@ -74,7 +74,7 @@ export function GeneriUserCard({
 
       <div className="flex items-center pt-4">
         {socials.map((l, index) => {
-          return <img src={l} key={index} alt="" className="w-6 h-6 mr-1" />
+          return <img src={l} key={index} alt="images" className="w-6 h-6 mr-1" />
         })}
       </div>
     </div>

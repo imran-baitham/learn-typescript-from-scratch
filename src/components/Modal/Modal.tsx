@@ -10,9 +10,9 @@ function Modal() {
 
   return (
     <div className="grid grid-cols-2 gap-10 bg-red-500">
-      {Random.map((item: { id: number; logic: string }) => {
+      {Random.map((item: { id: number; logic: string }, index: number) => {
         return (
-          <div className="h-[250px] w-full relative group" key={item.id}>
+          <div className="h-[250px] w-full relative group" key={index}>
             <div className="absolute inset-0 bg-black shadow-2xl group-hover:-translate-x-2 group-hover:translate-y-2 transition duration-300"></div>
             <div className="border-[1px] border-black transform group-hover:translate-x-2 group-hover:-translate-y-2  transition duration-300 dark:bg-zinc-800 bg-[#ffffff] absolute h-full w-full">
               <div className="h-full w-full shadow-2xl overflow-hidden">

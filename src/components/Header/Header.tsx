@@ -1,6 +1,7 @@
-import { linkSync } from 'fs'
 import Link from 'next/link'
-import React from 'react'
+import { useRouter } from 'next/router'
+import React, { useState } from 'react'
+import { Industries } from '../../mock'
 
 export interface HeaderProps {
   id: number | string
@@ -15,28 +16,39 @@ const Links: HeaderProps[] = [
     url: '/',
   },
   {
-    id: '1',
+    id: '2',
     name: 'Courses 🤓',
-    url: '/',
+    url: '/courses',
   },
   {
     id: '1',
     name: 'Blogs 🤩',
-    url: '/userlist',
+    url: '/blogs',
   },
   {
     id: '1',
     name: 'About 😈',
-    url: '/userlist',
+    url: '/about',
   },
   {
     id: '1',
-    name: 'More 😢',
-    url: '/',
+    name: 'More 😱',
+    url: '/more',
   },
 ]
 
 function Header() {
+  const router = useRouter()
+
+  const handleSearch = (event: any) => {
+    if (event.key === 'Enter') {
+      localStorage.setItem('query', JSON.stringify(event.target.value))
+      if (event) {
+        router.push('/query')
+      }
+    }
+  }
+
   return (
     <div className="border-b-2 border-gray-500">
       <div className="container_div h-16 flex items-center justify-between">
@@ -47,9 +59,9 @@ function Header() {
           <span className="underline pl-[2px]">J</span>s
         </h1>
         <div className="flex items-center">
-          {Links.map((link: HeaderProps) => {
+          {Links.map((link: HeaderProps, index: number) => {
             return (
-              <div key={link.id} className="pl-4">
+              <div key={index} className="pl-4">
                 <Link href={link.url}>
                   <span>{link.name}</span>
                 </Link>
@@ -60,10 +72,11 @@ function Header() {
         <div className="flex items-center">
           <input
             type="text"
-            placeholder="Search ..."
+            placeholder="Search Enter..."
             className={
               'w-full md:w-auto border-2 rounded border-gray-400 outline-none py-[6px] px-3 focus:border-blue-600'
             }
+            onKeyDown={handleSearch}
           />
         </div>
       </div>
