@@ -11,8 +11,8 @@ export interface dataProps {
 }
 
 export interface GenericFilterProps {
-  title: string
-  subtitle: string
+  title?: string
+  subtitle?: string
   data: UserDataProps[]
   pagination: string[]
   className?: string

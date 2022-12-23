@@ -29,7 +29,7 @@ function SearchQuery() {
     <div className="container_div py-20">
       <h1 className="text-4xl pt-2 font-bold">
         <span className="text-4xl">🔍 </span> Search results{' '}
-        {filterData.length > 0 ? `${filterData}` : '...'}
+        {filterData.length > 0 ? `${querysearch}` : `${querysearch}`}
       </h1>
       <div className="border-gray-500 border-2 mt-10 border-dashed flex justify-center w-full">
         <div className="w-full p-10">
