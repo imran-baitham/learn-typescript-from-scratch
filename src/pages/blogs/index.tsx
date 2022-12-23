@@ -19,7 +19,7 @@ function index() {
       <div className="mt-20 md:mt-5 border-4 border-dashed flex items-center justify-center">
         <div className="dark:bg-zinc-800 bg-white">
           <div className="container_main">
-            <h1 className="text-yellow-400 font-bold text-4xl bg-white w-[239px] -translate-y-6">
+            <h1 className="text-blue-400 font-bold text-4xl bg-white w-[239px] -translate-y-6">
               Letest Article
             </h1>
             <div className="py-8 px-1">
@@ -43,7 +43,7 @@ function index() {
                             : post.subtitle}
                         </p>
                       </div>
-                      <div className="p-3 dark:text-yellow-300 text-yellow-600 justify-between items-center flex">
+                      <div className="p-3 dark:text-yellow-300 text-blue-400 justify-between items-center flex">
                         <Link href={`/blogs/${[post.slug]}`} passHref>
                           <span>😍 Read article</span>
                         </Link>
