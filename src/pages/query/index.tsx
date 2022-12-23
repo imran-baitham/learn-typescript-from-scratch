@@ -19,6 +19,7 @@ function SearchQuery() {
 
   console.log(filterData, 'filterData')
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     setQuerySearch(localStorage.getItem('query'))
   })

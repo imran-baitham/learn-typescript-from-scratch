@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import { CgMoreVertical } from '@react-icons/all-files/cg/CgMoreVertical'
 import { Industries } from '../../mock'
-import SideBar from './SideBar'
 import { motion } from 'framer-motion'
 import { CgClose } from '@react-icons/all-files/cg/CgClose'
 
