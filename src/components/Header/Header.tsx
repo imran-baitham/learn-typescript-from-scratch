@@ -97,7 +97,7 @@ function Header() {
           onClick={() => setSiderBar(false)}
         >
           <motion.div
-            animate={{ x: [null, -40, 0] }}
+            animate={{ x: [null, -50, 0] }}
             transition={{ type: 'spring' }}
             className="fixed top-0 right-0 h-screen flex justify-end w-full"
           >

@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { Industries } from '../../mock'
+import { classNames } from '../../utils/string'
 
 interface dataProps {
   id: string | number
@@ -9,34 +9,51 @@ interface dataProps {
 }
 
 function SearchQuery() {
-  const [querysearch, setQuerySearch] = useState<any>('')
+  const [querysearch, setQuerySearch] = useState<string>('')
   const [search, setSearch] = useState(Industries)
-  console.log(search)
+  console.log(querysearch.length, 'querysearch')
 
-  const filterData = search.filter(
-    (item: dataProps) => item.title === querysearch,
+  const filterData = search.find(
+    (item: dataProps) => item.title.toLowerCase() === querysearch.toLowerCase(),
   )
 
-  console.log(filterData, 'filterData')
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const items = JSON.parse(localStorage.getItem('query') as string)
   useEffect(() => {
-    setQuerySearch(localStorage.getItem('query'))
-  })
+    if (items) {
+      setQuerySearch(items)
+    } else {
+      setQuerySearch('')
+    }
+  }, [items])
 
   const handleFocus = () => {}
 
   return (
     <div className="container_div py-20">
       <h1 className="text-4xl pt-2 font-bold">
-        <span className="text-4xl">🔍 </span> Search results{' '}
-        {filterData.length > 0 ? `${querysearch}` : `${querysearch}`}
+        <span className="text-4xl">🔍 </span> Search{' '}
+        {querysearch.length > 0 ? (
+          <span>
+            results{' '}
+            <span
+              className={classNames(
+                filterData?.title === querysearch
+                  ? 'text-blue-400'
+                  : 'text-red-400',
+              )}
+            >{`"${querysearch}"`}</span>
+          </span>
+        ) : (
+          '...'
+        )}
       </h1>
       <div className="border-gray-500 border-2 mt-10 border-dashed flex justify-center w-full">
         <div className="w-full p-10">
-          {filterData.length > 0 ? (
+          {filterData?.title === querysearch ? (
             <div>
-              <h1>List</h1>
+              <span>{filterData.id}</span>
+              <h1>{filterData.title}</h1>
+              <p>{filterData.subtitle}</p>
             </div>
           ) : (
             <div className="w-full flex items-center justify-center h-[500px]">
